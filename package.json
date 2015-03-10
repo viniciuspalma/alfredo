@@ -1,0 +1,42 @@
+{
+  "name": "Alfredo",
+  "version": "1.0.0",
+  "description": "Alfred App for browsers",
+  "main": "scripts/app.js",
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d .",
+    "build": "NODE_ENV=production browserify . | uglifyjs -cm > js/bundle.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniciuspalma/alfredo.git"
+  },
+  "keywords": [
+    "Alfredo"
+  ],
+  "author": "Vinicius Palma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viniciuspalma/alfredo/issues"
+  },
+  "homepage": "https://github.com/viniciuspalma/alfredo",
+  "dependencies": {
+    "flux": "^2.0.0",
+    "gulp-sass": "^1.3.3",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.12.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.2.3",
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "jest-cli": "~0.1.17",
+    "reactify": "^1.0.0",
+    "uglify-js": "~2.4.15",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  }
+}
