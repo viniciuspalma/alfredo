@@ -37,13 +37,13 @@ gulp.task('browserify', function() {
         var updateStart = Date.now();
         console.log('Updating!');
         watcher.bundle()
-        .pipe(source('main.js'))
-        .pipe(gulp.dest('./build/'))
+        .pipe(source('app.js'))
+        .pipe(gulp.dest('./js/'))
         .pipe(reload({stream: true}));
         console.log('Updated!', (Date.now() - updateStart) + 'ms');
     })
     .bundle()
-    .pipe(source('main.js'))
+    .pipe(source('app.js'))
     .pipe(gulp.dest('./js/'));
 });
 
